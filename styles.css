@@ -1,0 +1,144 @@
+/* Box sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Remove default margin */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set core body defaults */
+  body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+  }
+  
+  /* Remove list styles on ul, ol elements with a role attribute */
+  ul[role='list'],
+  ol[role='list'],
+  ul,
+  ol {
+    list-style: none;
+  }
+  
+  /* Anchor tag reset */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Make images easier to work with */
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Form elements inherit font */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    border: none;
+    outline: none;
+    background: none;
+  }
+  
+  /* Remove animations for users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+  
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* Set defaults for headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+    font-size: inherit;
+  }
+  
+  /* Allow percentage-based heights in layout */
+  html, body {
+    height: 100%;
+  }
+
+
+  :root
+
+  .hide {
+    display: none;
+  }
+
+  /* ------------------------------------------------------------- */
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;   
+}
+
+
+.header__highline {
+    background-color: #F0EEDD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.header__highline p {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;   
+    color: #670A18;  
+}
+
+.header__main-container {
+    display: flex;
+    align-items: center;
+    padding-left: 48px;
+    padding-right: 48px;
+    height: 82px;
+}
+
+
+.header__main-nav {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.header__logo img {
+    width: 131px;
+    height: 32px;
+
+}
+
