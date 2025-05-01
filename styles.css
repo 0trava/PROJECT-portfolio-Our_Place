@@ -1,3 +1,16 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Box sizing */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -83,12 +96,21 @@
     height: 100%;
   }
 
+  
+
 
   :root
 
   .hide {
     display: none;
   }
+
+    /* Ключові кадри для анімації подригування */
+    @keyframes shake {
+        0%   { transform: scale(1); }
+        50%  { transform: scale(0.92); }
+        100% { transform: scale(1); }
+      }
 
   /* ------------------------------------------------------------- */
 .header {
@@ -106,6 +128,7 @@
     height: 40px;
     padding-left: 48px;
     padding-right: 48px;
+
 }
 
 .header__highline p {
@@ -117,6 +140,7 @@
     text-align: center;
     text-transform: uppercase;   
     color: #670A18;  
+    pointer-events: none;
 }
 
 .header__main-container {
@@ -125,6 +149,8 @@
     padding-left: 48px;
     padding-right: 48px;
     height: 82px;
+    justify-content: center;
+
 }
 
 
@@ -132,13 +158,179 @@
     display: flex;
     width: 100%;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    max-width: 1440px;
 
 }
 
 .header__logo img {
     width: 131px;
-    height: 32px;
+    height: auto;
+    display: block;
+    
+}
+
+.header__logo{
+    transition: transform 0.3s ease;
+}
+
+.header__logo:hover, .header__logo:focus {
+    transform: scale(1.05);
+  }
+  
+  /* Актив: подригування */
+  .header__logo:active {
+    animation: shake 0.3s;
+  }
+  
+
+
+.header__main-nav ul{
+    display: flex;
+    align-items: center;
+}
+
+.header__main-nav ul li:first-child {
+    margin-right: 35px;
+  }
+
+  .header__main-nav ul li {
+    position: relative;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 22.1px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden; 
+  }
+  
+  .header__main-nav ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4F463F; 
+    transition: width 0.4s ease, left 0.4s ease;
+    transform: translateX(-50%);
+  }
+  
+  .header__main-nav ul li:hover::after,
+  .header__main-nav ul li:focus::after {
+    width: 100%;
+    left: 50%;
+  }
+
+  .header__main-nav--null {
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    background-color: #C87B5E;
+    color: #fff;
+    margin-left: 15px;
+
+  }
+
+
+  /* ------------HERO---------------------- */
+
+  .hero {
+    position: relative;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 48px;
+    padding-right: 48px;
+    width: 100%;
+    background-image: url(./assest/images/Rectangle.png);
+    background-position: center;
+    background-size: cover;
+    height: 605px;
 
 }
 
+.hero__container {
+    position: absolute;
+
+    top: 20vh;
+    left: 30vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.hero__container p{
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    
+}
+
+.hero__container h2{
+    color: #35312E;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 72px;
+    letter-spacing: 1px;
+    pointer-events: none;
+}
+
+.hero__container h3{
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 72px;
+    letter-spacing: 1px;
+    text-decoration: underline solid 2px currentColor;
+    margin-top: -25px;
+
+    color: #35312E;
+    pointer-events: none;
+
+}
+
+.hero__container button {
+    width: 248px;
+    height: 60px;
+    border-radius: 2px;
+
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20.4px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 57px;
+
+    
+    background-color: #D37657;
+    color: #FFFFFF;
+
+    border: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+ }
+
+  
+  .hero__container button:hover {
+    color: #D37657;
+    background-color: #fff;
+    border-color: #D37657;
+  }
+  
+  .hero__container button:active {
+    color: #fff;
+    background-color: #a9523a;
+    border-color: transparent;
+  }
