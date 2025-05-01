@@ -334,3 +334,97 @@
     background-color: #a9523a;
     border-color: transparent;
   }
+
+
+
+
+  /* --------------------Featured Products--------------------------------- */
+
+  .featured {
+    background: #F5F1E9;
+    height: 212px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 48px;
+    padding-right: 48px;
+    width: 100%;
+  }
+  .featured__container {
+    
+    display: flex;
+    flex-direction: column;
+
+    max-width: 1440px;
+
+  }
+
+  .featured h2 {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 55.2px;
+    letter-spacing: 1.2px;
+    text-align: center;
+    color: #35312E;
+
+    margin-bottom: 23px;
+
+  }
+
+  .featured__container ul {
+    display: flex;
+    width: 1140px;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+
+
+
+  /* -----------------------------ABOUT---------------------------- */
+
+  .about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 48px;
+    padding-right: 48px;
+    width: 100%;
+  }
+
+  .about__container {
+    display: flex;
+    max-width: 1440px;
+    margin-top: 110px;
+    margin-bottom: 110px;
+  }
+
+  .about__container h1{
+    width: 400px;
+
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 41px;
+    line-height: 46.2px;
+    letter-spacing: 1.25px;
+    text-align: center;
+    color: #35312E;
+
+    margin-right: 135px;
+
+  }
+
+  .about__container p {
+    width: 650px;
+
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.92px;
+    letter-spacing: 0%;
+
+    color: #4F463F;
+
+  }
