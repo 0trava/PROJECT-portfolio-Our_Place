@@ -367,6 +367,7 @@
     letter-spacing: 1.2px;
     text-align: center;
     color: #35312E;
+    pointer-events: none;
 
     margin-bottom: 23px;
 
@@ -379,6 +380,17 @@
     align-items: center;
 
   }
+
+  .featured__container li{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.featured__container li:hover, .featured__container li:focus {
+    transform: scale(1.05);
+  }
+  
+  
 
 
 
@@ -411,6 +423,7 @@
     letter-spacing: 1.25px;
     text-align: center;
     color: #35312E;
+    pointer-events: none;
 
     margin-right: 135px;
 
@@ -424,7 +437,78 @@
     font-size: 16px;
     line-height: 25.92px;
     letter-spacing: 0%;
+    pointer-events: none;
 
     color: #4F463F;
 
   }
+
+
+
+  /* ----------------------Designed elements------------------------------ */
+
+ .designed {
+    background-color: #FBF6EA;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    padding-left: 48px;
+    padding-right: 48px;
+    width: 100%;
+
+    padding-top: 75px;
+    padding-bottom: 140px;
+ } 
+
+ .designed__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .designed__container h2 {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 48px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #35312E;
+
+    margin-bottom: 52px;
+    pointer-events: none;
+
+ }
+
+ .designed__container ul {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f4e9; /* фон как на картинке */
+  }
+  
+  .designed__container  li {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    list-style: none;
+    cursor: pointer;
+  }
+  
+  /* Цвета по порядку */
+  .designed__container li:nth-child(1) { background-color: #e2a287; } /* розовый */
+  .designed__container li:nth-child(2) { background-color: #7c94a3; } /* синий */
+  .designed__container li:nth-child(3) { background-color: #b46e47; } /* рыжий */
+  .designed__container li:nth-child(4) { background-color: #788266; } /* хаки */
+  .designed__container li:nth-child(5) { background-color: #c23e38; } /* красный */
+  .designed__container li:nth-child(6) { background-color: #d1cbb6; } /* бежевый */
+  .designed__container li:nth-child(7) { 
+    background-color: #5a5651; /* тёмно-серый */
+    border: 2px solid #e2a287; /* активный бордер */
+    box-shadow: 0 0 0 2px #f9f4e9; /* чтобы создать эффект двойной обводки */
+  }
+  .designed__container li:nth-child(8) { background-color: #d4c4cc; } /* лавандовый */
