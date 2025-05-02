@@ -99,8 +99,6 @@
   
 
 
-  :root
-
   .hide {
     display: none;
   }
@@ -499,7 +497,14 @@
     border-radius: 50%;
     list-style: none;
     cursor: pointer;
-  }
+    transition: all 0.3s ease;
+}
+
+.designed__container  li:hover, .designed__container li:focus {
+    transform: scale(1.05);
+    border: 2px solid #e2a287;
+
+}
   
   /* Цвета по порядку */
   .designed__container li:nth-child(1) { background-color: #e2a287; } /* розовый */
@@ -688,6 +693,13 @@
     max-width: 250px;
     max-height: 250px;
     object-fit: contain; /* або cover, якщо хочеш, щоб заповнило повністю */
+
+    transition: transform 0.3s ease;
+}
+
+.product-card__image:hover, .product-card__image:focus {
+    transform: scale(1.05);
+
 }
 
 .best-sellers__list div {
@@ -741,3 +753,68 @@
 .product-card__colors {
     height: 100px;
 }
+
+/* product-card__color-dot*/
+.product-card__colors {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .product-card__colors  li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    list-style: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.product-card__colors  li:hover, .product-card__colors  li:focus {
+    transform: scale(1.05);
+    border: 2px solid #6E6259;
+
+}
+  
+  /* DOt card-1 */
+  .card-1 .product-card__colors  li:nth-child(1) { background-color: #E09D81; } /* розовый */
+  .card-1 .product-card__colors  li:nth-child(2) { background-color: #CDC7B3; } /* синий */
+  .card-1 .product-card__colors  li:nth-child(3) { background-color: #595752; } /* рыжий */
+  .card-1 .product-card__colors  li:nth-child(1) { 
+    border: 2px solid #6E6259; /* активный бордер */
+    box-shadow: 0 0 0 2px #f9f4e9; /* чтобы создать эффект двойной обводки */
+  }
+
+    /* DOt card-2 */
+    .card-2 .product-card__colors  li:nth-child(1) { background-color: #CCBD9E; } /* розовый */
+    .card-2 .product-card__colors  li:nth-child(2) { background-color: #B55900; } /* синий */
+    .card-2 .product-card__colors  li:nth-child(3) { background-color: #5B653B; } /* рыжий */
+    .card-2 .product-card__colors  li:nth-child(4) { background-color: #FFFFFF; } /* хаки */
+    .card-2 .product-card__colors  li:nth-child(1) { 
+      border: 2px solid #6E6259; /* активный бордер */
+      box-shadow: 0 0 0 2px #f9f4e9; /* чтобы создать эффект двойной обводки */
+    }
+
+      /* DOt card-3 */
+  .card-3 .product-card__colors  li:nth-child(1) { background-color: #E09D81; } /* розовый */
+  .card-3 .product-card__colors  li:nth-child(2) { background-color: #CDC7B3; } /* синий */
+  .card-3 .product-card__colors  li:nth-child(3) { background-color: #595752; } /* рыжий */
+  .card-3 .product-card__colors  li:nth-child(1) { 
+    border: 2px solid #6E6259; /* активный бордер */
+    box-shadow: 0 0 0 2px #f9f4e9; /* чтобы создать эффект двойной обводки */
+  }
+
+
+    /* DOt card-4 */
+    .card-4 .product-card__colors  li:nth-child(1) { background-color: #E09D81; } /* розовый */
+    .card-4 .product-card__colors  li:nth-child(2) { background-color: #CDC7B3; } /* синий */
+    .card-4 .product-card__colors  li:nth-child(3) { background-color: #595752; } /* рыжий */
+    .card-4 .product-card__colors  li:nth-child(4) { background-color: #788266; } /* хаки */
+    .card-4 .product-card__colors  li:nth-child(5) { background-color: #c23e38; } /* красный */
+    .card-4 .product-card__colors  li:nth-child(6) { background-color: #d1cbb6; } /* бежевый */
+    .card-4 .product-card__colors  li:nth-child(7) { background-color: #D3C2CA; } /* бежевый */
+    .card-4 .product-card__colors  li:nth-child(1) { 
+      border: 2px solid #6E6259; /* активный бордер */
+      box-shadow: 0 0 0 2px #f9f4e9; /* чтобы создать эффект двойной обводки */
+    }
