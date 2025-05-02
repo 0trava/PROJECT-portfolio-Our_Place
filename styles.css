@@ -512,3 +512,86 @@
     box-shadow: 0 0 0 2px #f9f4e9; /* чтобы создать эффект двойной обводки */
   }
   .designed__container li:nth-child(8) { background-color: #d4c4cc; } /* лавандовый */
+
+
+  /* Стилі для зображення */
+  .designed__discription {
+    position: relative;
+    margin-left: 150px;
+  }
+
+  .designed__discription--1,
+.designed__discription--2,
+.designed__discription--3,
+.designed__discription--4,
+.designed__discription--5,
+.designed__discription--6 {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15.48px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #6E6259;
+
+}
+
+.designed__discription--1 {
+    width: 135px;
+    height: 31px;
+
+    top: 80px;
+    left: -155px;
+
+}
+
+.designed__discription--2 {
+
+    width: 107px;
+    height: 31px;
+    top: 340px;
+    left: -80px;
+
+
+}
+
+.designed__discription--3 {
+    width: 172px;
+    height: 47px;
+    top: 440px;
+    left: -155px;
+    
+
+}
+
+.designed__discription--4 {
+
+    width: 158px;
+    height: 31px;
+    top: 50px;
+    left: 430px;
+
+}
+
+.designed__discription--5 {
+    width: 171px;
+    height: 31px;
+    top: 300px;
+    left: 430px;
+    
+
+}
+
+.designed__discription--6 {
+    width: 171px;
+    height: 31px;
+
+    top: 460px;
+    left: 430px;
+
+}
