@@ -404,6 +404,8 @@
     padding-left: 48px;
     padding-right: 48px;
     width: 100%;
+
+    background-color: #FCFAF6;
   }
 
   .about__container {
@@ -594,4 +596,148 @@
     top: 460px;
     left: 430px;
 
+}
+
+
+
+/* --------------------------------------Best Sellers-------------------- */
+
+.best-sellers {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    padding-left: 48px;
+    padding-right: 48px;
+    width: 100%;
+
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    background-color: #FCFAF6;
+
+}
+
+.best-sellers__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.best-sellers__title {
+    width: 477px;
+    height: 111px;
+
+
+
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 55.2px;
+    letter-spacing: 1.2px;
+    text-align: center;
+    pointer-events: none;
+
+    color: #35312E;
+
+}
+
+.best-sellers__subtitle {
+    width: 441px;
+    height: 58px;
+
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28.98px;
+    letter-spacing: 0%;
+    text-align: center;
+    pointer-events: none;
+
+    color: #4F463F;
+
+    
+    margin-bottom: 75px;
+    margin-top: 18px;
+
+}
+
+.best-sellers__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+
+}
+
+.product-card__image-wrapper {
+    background-color: #F7F3EB;
+    height: 150px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 200px;
+    overflow: hidden; /* Обрізає зайве, якщо зображення більше */
+    margin-bottom: 20px;
+}
+
+.product-card__image {
+    max-width: 250px;
+    max-height: 250px;
+    object-fit: contain; /* або cover, якщо хочеш, щоб заповнило повністю */
+}
+
+.best-sellers__list div {
+    width: 286px;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.product-card__name {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23.8px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+
+    color: #35312E;
+}
+
+.product-card__price {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.1px;
+    text-align: center;
+
+    margin-bottom: 5px;
+
+    color: #6E635A;
+
+}
+
+.product-card__description {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 19.6px;
+    letter-spacing: 0.2px;
+    text-align: center;
+
+    color: #6E635A;
+
+}
+
+.product-card__colors {
+    height: 100px;
 }
