@@ -818,3 +818,96 @@
       border: 2px solid #6E6259; /* активный бордер */
       box-shadow: 0 0 0 2px #f9f4e9; /* чтобы создать эффект двойной обводки */
     }
+
+
+    /* -----------------------<!-- SECTION FOLLOW US -->-------------------- */
+
+.follow-us {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0px;
+    height: 480px;
+    overflow: hidden;
+}
+
+.follow-us__content {
+    background-color: #F5F1E9;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 109px;
+}
+
+.follow-us__image, .follow-us__image img{
+    height: 480px;
+    object-fit: cover; 
+}
+
+.follow-us__title {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 20.4px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #35312E;
+
+}
+
+.follow-us__subtitle {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 46.08px;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 450px;
+
+    color: #35312E ;
+
+    margin-top: 33px;
+    margin-bottom: 60px;
+}
+
+.follow-us__button {
+    width: 206px;
+    height: 54px;
+    border-radius: 4px;
+    border-width: 1px;
+    background-color: #FFFFFF;
+    
+    border: 1px solid #AAA0984A;
+
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+ }
+
+  
+ .follow-us__button:hover {
+    color: #D37657;
+    background-color: #fff;
+    border-color: #D37657;
+  }
+  
+  .follow-us__button:active {
+    color: #fff;
+    background-color: #a9523a;
+    border-color: transparent;
+  }
+
+
+
+
+
