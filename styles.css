@@ -829,10 +829,10 @@
     gap: 0px;
     height: 480px;
     overflow: hidden;
+    background-color: #F5F1E9;
 }
 
 .follow-us__content {
-    background-color: #F5F1E9;
     width: 40vw;
     display: flex;
     flex-direction: column;
