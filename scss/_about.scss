@@ -1,0 +1,39 @@
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 48px;
+    width: 100%;
+    background-color: #FCFAF6;
+  
+    &__container {
+      display: flex;
+      max-width: 1440px;
+      margin: 110px 0;
+  
+      h1 {
+        width: 400px;
+        font-family: Roboto;
+        font-weight: 700;
+        font-size: 41px;
+        line-height: 46.2px;
+        letter-spacing: 1.25px;
+        text-align: center;
+        color: #35312E;
+        pointer-events: none;
+        margin-right: 135px;
+      }
+  
+      p {
+        width: 650px;
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25.92px;
+        letter-spacing: 0;
+        color: #4F463F;
+        pointer-events: none;
+      }
+    }
+  }
+  
