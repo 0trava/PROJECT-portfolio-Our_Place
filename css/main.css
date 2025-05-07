@@ -469,11 +469,15 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 48px;
   width: 100%;
   background-color: #FCFAF6;
+  /* Адаптивні стилі для екранів до 768px */
+  /* Адаптивні стилі для екранів до 768px */
+  /* Адаптивні стилі для екранів до 480px */
 }
 .about__container {
   display: flex;
   max-width: 1440px;
   margin: 110px 0;
+  flex-wrap: wrap; /* Додаємо можливість для елементів обертатися на мобільних пристроях */
 }
 .about__container h1 {
   width: 400px;
@@ -496,6 +500,70 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0;
   color: #4F463F;
   pointer-events: none;
+}
+@media (max-width: 1300px) {
+  .about {
+    padding: 0 20px; /* Зменшуємо відступи для середніх екранів */
+  }
+  .about__container {
+    display: flex;
+    max-width: 1440px;
+  }
+  .about h1 {
+    width: 400px;
+    margin-right: 40px;
+  }
+  .about p {
+    width: 400px;
+  }
+}
+@media (max-width: 780px) {
+  .about {
+    padding: 0 20px; /* Зменшуємо відступи для середніх екранів */
+  }
+  .about__container {
+    margin: 60px 0;
+    flex-direction: column; /* Окремі блоки по вертикалі */
+    align-items: center; /* Вирівнюємо елементи по центру */
+    justify-content: center;
+  }
+  .about h1 {
+    width: 100%; /* Забираємо фіксовану ширину, щоб заголовок адаптувався */
+    font-size: 30px;
+    line-height: 40px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    text-align: center; /* Вирівнюємо текст по центру */
+  }
+  .about p {
+    width: 100%; /* Забираємо фіксовану ширину для абзацу */
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center; /* Вирівнюємо текст по центру */
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .about {
+    padding: 0 10px; /* Зменшуємо відступи на маленьких екранах */
+  }
+  .about__container {
+    margin: 40px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about h1 {
+    font-size: 24px;
+    line-height: 32px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .about p {
+    font-size: 12px;
+    line-height: 18px;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .designed {
@@ -619,6 +687,73 @@ h1, h2, h3, h4, h5, h6 {
   height: 31px;
   top: 460px;
   left: 430px;
+}
+@media (max-width: 800px) {
+  .designed__discription {
+    margin-left: 150px;
+  }
+  .designed__discription--1, .designed__discription--2, .designed__discription--3, .designed__discription--4, .designed__discription--5, .designed__discription--6 {
+    font-size: 10px;
+    line-height: 13px;
+  }
+  .designed__discription--1 {
+    top: 10%;
+    left: -15%;
+  }
+  .designed__discription--2 {
+    top: 44%;
+    left: -15%;
+  }
+  .designed__discription--3 {
+    top: 67%;
+    left: -10%;
+  }
+  .designed__discription--4 {
+    top: 7%;
+    left: 65%;
+  }
+  .designed__discription--5 {
+    top: 38%;
+    left: 65%;
+  }
+  .designed__discription--6 {
+    top: 60%;
+    left: 60%;
+  }
+}
+@media (max-width: 650px) {
+  .designed h2 {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  .designed__discription {
+    margin-left: 50px;
+  }
+  .designed__discription--1, .designed__discription--2, .designed__discription--3, .designed__discription--4, .designed__discription--5, .designed__discription--6 {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .designed h2 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  .designed .designed__discription {
+    margin-left: 10px;
+  }
+  .designed ul {
+    gap: 10px;
+  }
+  .designed ul li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  .designed__discription {
+    margin-left: 100px;
+  }
 }
 
 .best-sellers {
