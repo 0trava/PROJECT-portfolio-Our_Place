@@ -51,6 +51,7 @@ $dot-size: 20px;
 
   &__list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 60px;
 
@@ -63,8 +64,36 @@ $dot-size: 20px;
     }
   }
 
+
+
   // Адаптивність
-  @media (max-width: 768px) {
+  @media (max-width: 1420px) {
+    &__list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      max-width: 60vw;
+  
+
+    }
+
+  }
+
+  @media (max-width: 1040px) {
+    &__list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      max-width: 90vw;
+  
+
+    }
+
+  }
+
+  @media (max-width: 720px) {
     padding: 40px 20px;
 
     &__title {
@@ -92,7 +121,7 @@ $dot-size: 20px;
 .product-card {
   &__image-wrapper {
     background-color: #F7F3EB;
-    width: 250px;
+    width: 20vw;
     height: 150px;
     display: flex;
     align-items: center;
