@@ -510,11 +510,11 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 1440px;
   }
   .about h1 {
-    width: 400px;
+    width: 40vw;
     margin-right: 40px;
   }
   .about p {
-    width: 400px;
+    width: 40vw;
   }
 }
 @media (max-width: 780px) {
