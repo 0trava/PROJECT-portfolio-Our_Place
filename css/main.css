@@ -1043,6 +1043,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   padding: 80px 0 114px;
   max-width: 1440px;
+  margin: 0 auto;
 }
 .keep-in-touch__left {
   display: flex;
@@ -1052,14 +1053,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #F5F1E9;
 }
 .keep-in-touch__left .keep-in-touch__title {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 23px;
   line-height: 57.8px;
   letter-spacing: 0.7px;
 }
 .keep-in-touch__left .keep-in-touch__text {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -1106,7 +1107,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 447px;
 }
 .keep-in-touch__right .keep-in-touch__nav .keep-in-touch__list-title {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 12px;
   line-height: 20.4px;
@@ -1116,7 +1117,7 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
 }
 .keep-in-touch__right .keep-in-touch__nav .keep-in-touch__list li {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 30.6px;
@@ -1136,7 +1137,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 50px;
 }
 .keep-in-touch__right .keep-in-touch__logos-title {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 12px;
   line-height: 20.4px;
@@ -1157,6 +1158,20 @@ h1, h2, h3, h4, h5, h6 {
 .keep-in-touch__right .keep-in-touch__logos-list li:hover, .keep-in-touch__right .keep-in-touch__logos-list li:focus {
   transform: scale(1.05);
 }
+@media (max-width: 1000px) {
+  .keep-in-touch__left {
+    width: 40%;
+  }
+  .keep-in-touch__right {
+    width: 50%;
+  }
+  .keep-in-touch .email-subscribe {
+    max-width: 300px;
+  }
+  .keep-in-touch .email-subscribe__submit {
+    margin-right: 10px;
+  }
+}
 @media (max-width: 768px) {
   .keep-in-touch {
     padding: 20px;
@@ -1165,12 +1180,21 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     gap: 40px;
   }
-  .keep-in-touch__left, .keep-in-touch__right {
+  .keep-in-touch__left, .keep-in-touch__right, .keep-in-touch__logos {
+    display: flex;
+    align-items: center;
     width: 100%;
   }
-  .keep-in-touch__right .keep-in-touch__nav {
-    flex-direction: column;
-    gap: 30px;
+  .keep-in-touch .keep-in-touch__text {
+    width: 60%;
+  }
+}
+@media (max-width: 380px) {
+  .keep-in-touch .keep-in-touch__nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    max-width: 300px;
   }
 }
 
