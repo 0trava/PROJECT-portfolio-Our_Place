@@ -218,4 +218,27 @@ $dot-size: 20px;
 .card-2 .product-card__colors li:nth-child(4) { background-color: #FFFFFF; }
 .card-2 .product-card__colors li:nth-child(1) { @extend .active; }
 
-// І так далі для card-3, card-4...
+     /* DOt card-3 */
+     .card-3 .product-card__colors  li:nth-child(1) { background-color: #E09D81; } /* розовый */
+     .card-3 .product-card__colors  li:nth-child(2) { background-color: #CDC7B3; } /* синий */
+     .card-3 .product-card__colors  li:nth-child(3) { background-color: #595752; } /* рыжий */
+     .card-3 .product-card__colors  li:nth-child(1) { 
+       border: 2px solid #6E6259; /* активный бордер */
+       box-shadow: 0 0 0 2px #f9f4e9; /* чтобы создать эффект двойной обводки */
+     }
+   
+   
+       /* DOt card-4 */
+       .card-4 .product-card__colors  li:nth-child(1) { background-color: #E09D81; } /* розовый */
+       .card-4 .product-card__colors  li:nth-child(2) { background-color: #CDC7B3; } /* синий */
+       .card-4 .product-card__colors  li:nth-child(3) { background-color: #595752; } /* рыжий */
+       .card-4 .product-card__colors  li:nth-child(4) { background-color: #788266; } /* хаки */
+       .card-4 .product-card__colors  li:nth-child(5) { background-color: #c23e38; } /* красный */
+       .card-4 .product-card__colors  li:nth-child(6) { background-color: #d1cbb6; } /* бежевый */
+       .card-4 .product-card__colors  li:nth-child(7) { background-color: #D3C2CA; } /* бежевый */
+       .card-4 .product-card__colors  li:nth-child(1) { 
+         border: 2px solid #6E6259; /* активный бордер */
+         box-shadow: 0 0 0 2px #f9f4e9; /* чтобы создать эффект двойной обводки */
+       }
+   
+   

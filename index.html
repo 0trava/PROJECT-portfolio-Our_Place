@@ -26,7 +26,7 @@
 <body>
 
     <!-- Header -->
-    <!-- <header class="header">
+    <header class="header">
 
         <div class="header__highline">
             <p>SHIPPING AND RETURNS ARE ALWAYS FREE FROM OUR PLACE TO YOURS 🙂</p>
@@ -47,9 +47,18 @@
                 </ul>
             </nav>
             <button class="header__main-nav--null">0</button>
-            <button class="menu-toggle hide">☰</button>
+            <button class="menu-toggle hide"></button>
+
+            <div class="mobile-menu hide">
+                <ul>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#always_pan">Always Pan</a></li>
+                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                </ul>
+            </div>
         </div>
-    </header> -->
+    </header>
 
     <!-- Hero -->
     <div class="hero">
@@ -282,7 +291,15 @@
     </footer>
 
 
-
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.mobile-menu');
+      
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('show');
+            toggle.classList.toggle('active');
+        });
+      </script>
 
 </body>
 
