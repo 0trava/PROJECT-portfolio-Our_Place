@@ -85,6 +85,14 @@
     &__container {
       // width: 100%;
       padding: 0px 5px;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      width: 80%;
+
+      // h2 {
+      //   width: 80%;
+      // }
 
       ul {
         display: flex;
