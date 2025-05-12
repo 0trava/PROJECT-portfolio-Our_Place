@@ -47,6 +47,14 @@ $text-gray: #888;
       margin: 11px 0 62px;
     }
 
+    .email-subscribe__input.invalid {
+      color: #670A18;
+    }
+    
+    .email-subscribe__input.valid {
+      color: #000000;
+    }
+
     .email-subscribe {
       background-color: $input-bg;
       padding: 15px 20px;

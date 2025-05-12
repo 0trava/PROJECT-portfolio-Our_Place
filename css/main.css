@@ -1197,6 +1197,12 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 24px;
   margin: 11px 0 62px;
 }
+.keep-in-touch__left .email-subscribe__input.invalid {
+  color: #670A18;
+}
+.keep-in-touch__left .email-subscribe__input.valid {
+  color: #000000;
+}
 .keep-in-touch__left .email-subscribe {
   background-color: #f5f2ec;
   padding: 15px 20px;

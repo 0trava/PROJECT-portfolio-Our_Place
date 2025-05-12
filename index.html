@@ -66,7 +66,7 @@
             <p>Meet The Always Pan</p>
             <h2>Your new</h2>
             <h3>skillet</h3>
-            <button>Shop the Always Pan</button>
+            <button id="shopPanBtn">Shop the Always Pan</button>
         </div>
     </div>
 
@@ -86,7 +86,7 @@
 
 
     <!-- About -->
-    <div class="about">
+    <div class="about" id="mission">
         <div class="about__container">
             <h1>Welcome to Our Place</h1>
             <p>At Our Place, we believe in the power of home-cooking to bring people together. Our collections are new
@@ -98,7 +98,7 @@
 
 
     <!-- Designed elements -->
-    <section class="designed">
+    <section class="designed" id="always_pan">
         <div class="designed__container">
             <h2>Designed for Everything and Always</h2>
             <ul>
@@ -128,7 +128,7 @@
 
 
     <!-- Best Sellers -->
-    <section class="best-sellers">
+    <section class="best-sellers" id="shop">
         <div class="best-sellers__container"></div>
         <h2 class="best-sellers__title">From curated essentials to limited-run editions.</h2>
         <p class="best-sellers__subtitle">We make products inspired by traditions – and we're starting with one you
@@ -221,7 +221,7 @@
     </section>
 
     <!-- Keep in touch -->
-    <section class="keep-in-touch">
+    <section class="keep-in-touch" id="faqs">
         <div class="keep-in-touch__container">
             <div class="keep-in-touch__left">
                 <h3 class="keep-in-touch__title">Keep in touch ☺</h3>
@@ -230,7 +230,7 @@
                 </p>
                 <div class="email-subscribe">
                     <input type="email" placeholder="Your email" class="email-subscribe__input">
-                    <button class="email-subscribe__submit">SUBMIT</button>
+                    <button class="email-subscribe__submit" disabled>SUBMIT</button>
                 </div>
             </div>
 
@@ -294,12 +294,20 @@
     <script>
         const toggle = document.querySelector('.menu-toggle');
         const menu = document.querySelector('.mobile-menu');
-      
+
         toggle.addEventListener('click', () => {
             menu.classList.toggle('show');
             toggle.classList.toggle('active');
         });
-      </script>
+    </script>
+
+    <script>
+        document.getElementById('shopPanBtn').addEventListener('click', function () {
+            document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
+    <script src="./js/email.js" defer></script>
 
 </body>
 
