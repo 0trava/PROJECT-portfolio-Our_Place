@@ -2,6 +2,9 @@
 
 A responsive website project based on the "Our Place" Figma design. Built as a portfolio layout practice using semantic HTML, SCSS, and vanilla JavaScript.
 
+👉 **[Live Demo – View the finished website here](https://0trava.github.io/PROJECT-portfolio-Our_Place/)**
+
+
 ## 🔗 Figma Design
 
 [Click to view the Figma design](https://www.figma.com/design/vAHjeURLVnCbZUbsOPoUDs/Our-Place?node-id=0-1&p=f&t=L9g8spzYh4A4n6pe-0)
