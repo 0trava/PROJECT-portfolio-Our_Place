@@ -287,6 +287,8 @@ h1, h2, h3, h4, h5, h6 {
   left: 30vw;
   display: flex;
   flex-direction: column;
+  /* Печатание и стирание */
+  /* Мигание курсора */
 }
 .hero .hero__container p {
   font-family: Roboto;
@@ -315,6 +317,38 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -25px;
   color: #35312E;
   pointer-events: none;
+}
+.hero .hero__container .typing {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 72px;
+  letter-spacing: 1px;
+  text-decoration: underline solid 2px currentColor;
+  margin-top: -25px;
+  color: #35312E;
+  pointer-events: none;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #35312E;
+  width: 0;
+  animation: typing 4s steps(7, end) 2s infinite alternate, blink 0.5s step-end infinite;
+}
+@keyframes typing {
+  0% {
+    width: 0ch;
+  }
+  50% {
+    width: 7ch; /* "skillet" = 7 букв */
+  }
+  100% {
+    width: 0ch;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 .hero .hero__container button {
   width: 248px;
@@ -1294,6 +1328,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .keep-in-touch__right .keep-in-touch__logos-list li:hover, .keep-in-touch__right .keep-in-touch__logos-list li:focus {
   transform: scale(1.05);
+}
+.keep-in-touch .email-subscribe__message {
+  margin-top: 6px;
+  font-size: 14px;
 }
 @media (max-width: 1000px) {
   .keep-in-touch__left {

@@ -166,6 +166,11 @@ $text-gray: #888;
     }
   }
 
+  .email-subscribe__message {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
   // Адаптивність до 1000px
   @media (max-width: 1000px) {
     &__left {
