@@ -216,7 +216,7 @@ $dot-size: 20px;
 .card-2 .product-card__colors li:nth-child(2) { background-color: #B55900; }
 .card-2 .product-card__colors li:nth-child(3) { background-color: #5B653B; }
 .card-2 .product-card__colors li:nth-child(4) { background-color: #FFFFFF; }
-.card-2 .product-card__colors li:nth-child(1) { @extend .active; }
+.card-2 .product-card__colors li:nth-child(4) { @extend .active; }
 
      /* DOt card-3 */
      .card-3 .product-card__colors  li:nth-child(1) { background-color: #E09D81; } /* розовый */
