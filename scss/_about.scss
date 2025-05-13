@@ -1,16 +1,32 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0 48px;
   width: 100%;
   background-color: #FCFAF6;
 
   &__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     max-width: 1440px;
     margin: 110px 0;
-    flex-wrap: wrap;  /* Додаємо можливість для елементів обертатися на мобільних пристроях */
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;  /* Додаємо можливість для елементів обертатися на мобільних пристроях */
 
     h1 {
       width: 400px;
@@ -42,6 +58,8 @@
     padding: 0 20px; /* Зменшуємо відступи для середніх екранів */
 
     &__container {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       max-width: 1440px;
     }
@@ -61,9 +79,16 @@
 
     &__container {
       margin: 60px 0;
-      flex-direction: column;  /* Окремі блоки по вертикалі */
-      align-items: center;  /* Вирівнюємо елементи по центру */
-      justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;  /* Окремі блоки по вертикалі */
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;  /* Вирівнюємо елементи по центру */
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
     }
 
     h1 {
@@ -90,8 +115,13 @@
 
     &__container {
       margin: 40px 0;
-      flex-direction: column;
-      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
     }
 
     h1 {

@@ -1,5 +1,12 @@
 @charset "UTF-8";
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 *, *::before, *::after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -65,12 +72,18 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes shake {
   0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
   }
   50% {
+    -webkit-transform: scale(0.92);
+    -ms-transform: scale(0.92);
     transform: scale(0.92);
   }
   100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
   }
 }
@@ -79,22 +92,43 @@ h1, h2, h3, h4, h5, h6 {
     scroll-behavior: auto;
   }
   *, *::before, *::after {
+    -webkit-animation-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+    -o-transition-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 /* ------------------------------------------------------------- */
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
 }
 .header__highline {
   background-color: #F0EEDD;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   height: 40px;
   padding: 0 48px;
@@ -111,21 +145,38 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
 }
 .header__main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 0 48px;
   height: 82px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .header__main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   max-width: 1440px;
 }
 .header__main-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .header__main-nav ul li {
@@ -151,7 +202,11 @@ h1, h2, h3, h4, h5, h6 {
   width: 0;
   height: 2px;
   background-color: #4F463F;
+  -webkit-transition: width 0.4s ease, left 0.4s ease;
+  -o-transition: width 0.4s ease, left 0.4s ease;
   transition: width 0.4s ease, left 0.4s ease;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .header__main-nav ul li:hover::after, .header__main-nav ul li:focus::after {
@@ -167,7 +222,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 15px;
 }
 .header__logo {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .header__logo img {
   width: 131px;
@@ -175,9 +234,12 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 .header__logo:hover, .header__logo:focus {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 .header__logo:active {
+  -webkit-animation: shake 0.3s;
   animation: shake 0.3s;
 }
 
@@ -199,6 +261,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 780px) {
   .menu-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-left: 20px;
   }
@@ -224,14 +288,25 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 20px;
 }
 .mobile-menu ul li {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -255,7 +330,11 @@ h1, h2, h3, h4, h5, h6 {
   width: 0;
   height: 2px;
   background-color: #4F463F;
+  -webkit-transition: width 0.4s ease, left 0.4s ease;
+  -o-transition: width 0.4s ease, left 0.4s ease;
   transition: width 0.4s ease, left 0.4s ease;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .mobile-menu ul li:hover::after, .mobile-menu ul li:focus::after {
@@ -266,11 +345,23 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 /* ------------HERO---------------------- */
 .hero {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding-left: 48px;
   padding-right: 48px;
@@ -285,7 +376,12 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 20vh;
   left: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   /* Печатание и стирание */
   /* Мигание курсора */
@@ -313,6 +409,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 50px;
   line-height: 72px;
   letter-spacing: 1px;
+  -webkit-text-decoration: underline solid 2px currentColor;
   text-decoration: underline solid 2px currentColor;
   margin-top: -25px;
   color: #35312E;
@@ -324,6 +421,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 50px;
   line-height: 72px;
   letter-spacing: 1px;
+  -webkit-text-decoration: underline solid 2px currentColor;
   text-decoration: underline solid 2px currentColor;
   margin-top: -25px;
   color: #35312E;
@@ -332,7 +430,19 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   border-right: 2px solid #35312E;
   width: 0;
+  -webkit-animation: typing 4s steps(7, end) 2s infinite alternate, blink 0.5s step-end infinite;
   animation: typing 4s steps(7, end) 2s infinite alternate, blink 0.5s step-end infinite;
+}
+@-webkit-keyframes typing {
+  0% {
+    width: 0ch;
+  }
+  50% {
+    width: 7ch; /* "skillet" = 7 букв */
+  }
+  100% {
+    width: 0ch;
+  }
 }
 @keyframes typing {
   0% {
@@ -343,6 +453,11 @@ h1, h2, h3, h4, h5, h6 {
   }
   100% {
     width: 0ch;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
   }
 }
 @keyframes blink {
@@ -366,6 +481,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #D37657;
   color: #FFFFFF;
   border: 2px solid transparent;
+  -webkit-transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  -o-transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
   transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 .hero .hero__container button:hover {
@@ -452,32 +569,60 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 .featured {
   background: #F5F1E9;
   height: 212px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 0 48px;
   width: 100%;
   /* Адаптивні стилі для 320px */
 }
 .featured__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   max-width: 1440px;
 }
 .featured__container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 1140px;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .featured__container li {
   cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .featured__container li:hover, .featured__container li:focus {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 .featured h2 {
@@ -501,17 +646,30 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 5px;
   }
   .featured__container ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .featured__container li {
     width: 8vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-bottom: 20px;
   }
   .featured__container li:hover, .featured__container li:focus {
+    -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
   }
   .featured h2 {
@@ -528,23 +686,42 @@ h1, h2, h3, h4, h5, h6 {
   }
   .featured__container {
     padding: 0px 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-line-pack: center;
     align-content: center;
     width: 80%;
   }
   .featured__container ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 100%;
   }
   .featured__container li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-bottom: 20px;
   }
   .featured__container li:hover, .featured__container li:focus {
+    -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
   }
   .featured h2 {
@@ -560,22 +737,34 @@ h1, h2, h3, h4, h5, h6 {
   }
   .featured__container {
     padding: 0px 5px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .featured__container ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 40px;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     padding: 0 60px;
     width: 100%;
   }
   .featured__container li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-bottom: 20px;
   }
   .featured__container li:hover, .featured__container li:focus {
+    -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
   }
   .featured h2 {
@@ -585,9 +774,21 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 0 48px;
   width: 100%;
@@ -597,9 +798,12 @@ h1, h2, h3, h4, h5, h6 {
   /* Адаптивні стилі для екранів до 480px */
 }
 .about__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-width: 1440px;
   margin: 110px 0;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap; /* Додаємо можливість для елементів обертатися на мобільних пристроях */
 }
 .about__container h1 {
@@ -629,6 +833,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 20px; /* Зменшуємо відступи для середніх екранів */
   }
   .about__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     max-width: 1440px;
   }
@@ -646,8 +852,15 @@ h1, h2, h3, h4, h5, h6 {
   }
   .about__container {
     margin: 60px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column; /* Окремі блоки по вертикалі */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center; /* Вирівнюємо елементи по центру */
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .about h1 {
@@ -672,7 +885,12 @@ h1, h2, h3, h4, h5, h6 {
   }
   .about__container {
     margin: 40px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   .about h1 {
@@ -689,19 +907,40 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 .designed {
   background-color: #FBF6EA;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 75px 48px 140px;
   width: 100%;
 }
 .designed__container {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .designed__container h2 {
@@ -715,8 +954,12 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
 }
 .designed__container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 12px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 20px;
   background-color: #f9f4e9;
@@ -727,9 +970,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   list-style: none;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .designed__container ul li:hover, .designed__container ul li:focus {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
   border: 2px solid #e2a287;
 }
@@ -754,6 +1001,7 @@ h1, h2, h3, h4, h5, h6 {
 .designed__container ul li:nth-child(7) {
   background-color: #5a5651;
   border: 2px solid #e2a287;
+  -webkit-box-shadow: 0 0 0 2px #f9f4e9;
   box-shadow: 0 0 0 2px #f9f4e9;
 }
 .designed__container ul li:nth-child(8) {
@@ -1111,8 +1359,18 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 2px #f9f4e9; /* чтобы создать эффект двойной обводки */
 }
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 .follow-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
   gap: 0;
@@ -1122,12 +1380,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 .follow-us__image, .follow-us__image img {
   height: 480px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .follow-us__content {
   width: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-top: 109px;
 }
@@ -1165,6 +1431,8 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.5px;
   text-align: center;
   text-transform: uppercase;
+  -webkit-transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  -o-transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
   transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 .follow-us__button:hover {
@@ -1179,6 +1447,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 768px) {
   .follow-us {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     height: auto;
   }
@@ -1197,22 +1468,41 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 .keep-in-touch {
   background: #6C674D;
   padding: 0 48px;
   width: 100%;
 }
 .keep-in-touch__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 80px 0 114px;
   max-width: 1440px;
   margin: 0 auto;
 }
 .keep-in-touch__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   width: 50%;
   color: #F5F1E9;
@@ -1240,7 +1530,11 @@ h1, h2, h3, h4, h5, h6 {
 .keep-in-touch__left .email-subscribe {
   background-color: #f5f2ec;
   padding: 15px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   max-width: 440px;
   width: 100%;
@@ -1250,9 +1544,23 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   background: transparent;
   font-size: 16px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   color: #333;
   outline: none;
+}
+.keep-in-touch__left .email-subscribe__input::-webkit-input-placeholder {
+  color: #888;
+}
+.keep-in-touch__left .email-subscribe__input::-moz-placeholder {
+  color: #888;
+}
+.keep-in-touch__left .email-subscribe__input:-ms-input-placeholder {
+  color: #888;
+}
+.keep-in-touch__left .email-subscribe__input::-ms-input-placeholder {
+  color: #888;
 }
 .keep-in-touch__left .email-subscribe__input::placeholder {
   color: #888;
@@ -1267,12 +1575,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 .keep-in-touch__right {
   width: 447px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
 }
 .keep-in-touch__right .keep-in-touch__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   gap: 50px;
   max-width: 447px;
@@ -1296,13 +1615,20 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 13px;
   cursor: pointer;
   max-width: 98px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .keep-in-touch__right .keep-in-touch__nav .keep-in-touch__list li:hover, .keep-in-touch__right .keep-in-touch__nav .keep-in-touch__list li:focus {
   color: #F5F1E9;
 }
 .keep-in-touch__right .keep-in-touch__logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
   margin-top: 50px;
@@ -1318,15 +1644,23 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
 }
 .keep-in-touch__right .keep-in-touch__logos-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 9px;
   gap: 24px;
 }
 .keep-in-touch__right .keep-in-touch__logos-list li {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   cursor: pointer;
 }
 .keep-in-touch__right .keep-in-touch__logos-list li:hover, .keep-in-touch__right .keep-in-touch__logos-list li:focus {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 .keep-in-touch .email-subscribe__message {
@@ -1352,11 +1686,18 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;
   }
   .keep-in-touch__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 40px;
   }
   .keep-in-touch__left, .keep-in-touch__right, .keep-in-touch__logos {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 100%;
   }
@@ -1366,32 +1707,57 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 380px) {
   .keep-in-touch .keep-in-touch__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     gap: 10px;
     max-width: 300px;
   }
 }
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 .footer {
   background-color: #807C62;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 0 48px;
   width: 100%;
   color: rgba(252, 250, 246, 0.5019607843);
 }
 .footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-width: 1440px;
   margin: 20px 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
 }
 @media (max-width: 768px) {
   .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 10px;
   }
@@ -1407,13 +1773,23 @@ h1, h2, h3, h4, h5, h6 {
   color: #F5F1E9;
 }
 .footer__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 @media (max-width: 768px) {
   .footer__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 10px;
   }
@@ -1424,10 +1800,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .footer__links li {
@@ -1435,6 +1816,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .footer__links li:hover, .footer__links li:focus {
@@ -1449,12 +1832,20 @@ h1, h2, h3, h4, h5, h6 {
   width: 80px;
   height: 20px;
   border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-left: 30px;
   background-color: #FCFAF6;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .footer__btn:hover, .footer__btn:focus {
@@ -1467,7 +1858,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .footer__copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 4px;
   font-size: 12px;
@@ -1475,6 +1871,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 480px) {
   .footer__copyright {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-align: center;
   }

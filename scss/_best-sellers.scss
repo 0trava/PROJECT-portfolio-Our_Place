@@ -1,28 +1,47 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 // Кольори
-$bg-main: #FCFAF6;
-$text-dark: #35312E;
-$text-secondary: #6E635A;
-$text-muted: #4F463F;
-$active-border: #6E6259;
-$active-shadow: #f9f4e9;
-$dot-size: 20px;
+
 
 // Секція Best Sellers
 .best-sellers {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 75px 48px;
   width: 100%;
-  background-color: $bg-main;
+  background-color: #FCFAF6;
 
   &__container {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   &__title {
@@ -33,7 +52,7 @@ $dot-size: 20px;
     line-height: 55.2px;
     letter-spacing: 1.2px;
     text-align: center;
-    color: $text-dark;
+    color: #35312E;
     pointer-events: none;
   }
 
@@ -44,23 +63,35 @@ $dot-size: 20px;
     font-size: 18px;
     line-height: 28.98px;
     text-align: center;
-    color: $text-muted;
+    color: #4F463F;
     pointer-events: none;
     margin: 18px 0 75px;
   }
 
   &__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 60px;
 
     div {
       width: 286px;
       height: 440px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
     }
   }
 
@@ -69,9 +100,14 @@ $dot-size: 20px;
   // Адаптивність
   @media (max-width: 1420px) {
     &__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       gap: 40px;
       max-width: 60vw;
   
@@ -82,9 +118,14 @@ $dot-size: 20px;
 
   @media (max-width: 1040px) {
     &__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       gap: 40px;
       max-width: 90vw;
   
@@ -123,9 +164,15 @@ $dot-size: 20px;
     background-color: #F7F3EB;
     width: 20vw;
     height: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border-radius: 200px;
     overflow: hidden;
     margin-bottom: 20px;
@@ -134,12 +181,19 @@ $dot-size: 20px;
   &__image {
     max-width: 250px;
     max-height: 250px;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
     transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 
     &:hover,
     &:focus {
-      transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+          -ms-transform: scale(1.05);
+              transform: scale(1.05);
     }
   }
 
@@ -157,7 +211,7 @@ $dot-size: 20px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     margin-bottom: 4px;
-    color: $text-dark;
+    color: #35312E;
   }
 
   &__price {
@@ -166,7 +220,7 @@ $dot-size: 20px;
     line-height: 21px;
     letter-spacing: 0.1px;
     margin-bottom: 5px;
-    color: $text-secondary;
+    color: #6E635A;
   }
 
   &__description {
@@ -174,39 +228,47 @@ $dot-size: 20px;
     font-size: 11px;
     line-height: 19.6px;
     letter-spacing: 0.2px;
-    color: $text-secondary;
+    color: #6E635A;
   }
 
   &__colors {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 12px;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 20px;
     height: 100px;
 
     li {
-      width: $dot-size;
-      height: $dot-size;
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
       list-style: none;
       cursor: pointer;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
       transition: all 0.3s ease;
 
       &:hover,
       &:focus {
-        transform: scale(1.05);
-        border: 2px solid $active-border;
+        -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+                transform: scale(1.05);
+        border: 2px solid  #6E6259;
       }
 
       &.active {
-        border: 2px solid $active-border;
-        box-shadow: 0 0 0 2px $active-shadow;
+        border: 2px solid  #6E6259;
+        -webkit-box-shadow: 0 0 0 2px #f9f4e9;
+                box-shadow: 0 0 0 2px #f9f4e9;
       }
     }
   }
 }
 
-// Кольорові точки (можна окремим map-об'єктом, якщо треба)
 .card-1 .product-card__colors li:nth-child(1) { background-color: #E09D81; }
 .card-1 .product-card__colors li:nth-child(2) { background-color: #CDC7B3; }
 .card-1 .product-card__colors li:nth-child(3) { background-color: #595752; }
@@ -224,7 +286,8 @@ $dot-size: 20px;
      .card-3 .product-card__colors  li:nth-child(3) { background-color: #595752; } /* рыжий */
      .card-3 .product-card__colors  li:nth-child(1) { 
        border: 2px solid #6E6259; /* активный бордер */
-       box-shadow: 0 0 0 2px #f9f4e9; /* чтобы создать эффект двойной обводки */
+       -webkit-box-shadow: 0 0 0 2px #f9f4e9;
+               box-shadow: 0 0 0 2px #f9f4e9; /* чтобы создать эффект двойной обводки */
      }
    
    
@@ -238,7 +301,8 @@ $dot-size: 20px;
        .card-4 .product-card__colors  li:nth-child(7) { background-color: #D3C2CA; } /* бежевый */
        .card-4 .product-card__colors  li:nth-child(1) { 
          border: 2px solid #6E6259; /* активный бордер */
-         box-shadow: 0 0 0 2px #f9f4e9; /* чтобы создать эффект двойной обводки */
+         -webkit-box-shadow: 0 0 0 2px #f9f4e9;
+                 box-shadow: 0 0 0 2px #f9f4e9; /* чтобы создать эффект двойной обводки */
        }
    
    

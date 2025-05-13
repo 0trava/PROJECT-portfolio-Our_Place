@@ -1,31 +1,45 @@
-// Кольори
-$bg-follow: #F5F1E9;
-$text-dark: #35312E;
-$btn-border: #AAA0984A;
-$btn-hover: #D37657;
-$btn-active: #a9523a;
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
 
 // SECTION: Follow Us
 .follow-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   gap: 0;
   height: 480px;
   overflow: hidden;
-  background-color: $bg-follow;
+  background-color: #F5F1E9;
 
   &__image,
   &__image img {
     height: 480px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   &__content {
     width: 40vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-top: 109px;
   }
 
@@ -37,7 +51,7 @@ $btn-active: #a9523a;
     letter-spacing: 2px;
     text-align: center;
     text-transform: uppercase;
-    color: $text-dark;
+    color: #35312E;
   }
 
   &__subtitle {
@@ -48,7 +62,7 @@ $btn-active: #a9523a;
     letter-spacing: 1px;
     text-align: center;
     width: 40vw;
-    color: $text-dark;
+    color: #35312E;
     margin: 33px 0 60px;
   }
 
@@ -56,7 +70,7 @@ $btn-active: #a9523a;
     width: 206px;
     height: 54px;
     border-radius: 4px;
-    border: 1px solid $btn-border;
+    border: 1px solid #AAA0984A;
     background-color: #fff;
 
     font-family: Roboto;
@@ -67,24 +81,31 @@ $btn-active: #a9523a;
     text-align: center;
     text-transform: uppercase;
 
+    -webkit-transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+
+    -o-transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+
     transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 
     &:hover {
-      color: $btn-hover;
+      color: #D37657;
       background-color: #fff;
-      border-color: $btn-hover;
+      border-color: #D37657;
     }
 
     &:active {
       color: #fff;
-      background-color: $btn-active;
+      background-color: #a9523a;
       border-color: transparent;
     }
   }
 
   // Адаптивність до 768px
   @media (max-width: 768px) {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: auto;
 
     &__image,

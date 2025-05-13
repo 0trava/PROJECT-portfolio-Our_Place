@@ -1,6 +1,14 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 // Reset
 *, *::before, *::after {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   
   * {
@@ -71,9 +79,9 @@
   
   // Animation keyframes
   @keyframes shake {
-    0%   { transform: scale(1); }
-    50%  { transform: scale(0.92); }
-    100% { transform: scale(1); }
+    0%   { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
+    50%  { -webkit-transform: scale(0.92); -ms-transform: scale(0.92); transform: scale(0.92); }
+    100% { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
   }
   
   // Accessibility
@@ -83,9 +91,13 @@
     }
   
     *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
+      -webkit-animation-duration: 0.01ms !important;
+              animation-duration: 0.01ms !important;
+      -webkit-animation-iteration-count: 1 !important;
+              animation-iteration-count: 1 !important;
+      -webkit-transition-duration: 0.01ms !important;
+           -o-transition-duration: 0.01ms !important;
+              transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
   }

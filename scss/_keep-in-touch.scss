@@ -1,38 +1,46 @@
-// Шрифти
-$font-main: Roboto, sans-serif;
-$font-secondary: sans-serif;
-
-// Кольори
-$bg-dark: #6C674D;
-$text-light: #F5F1E9;
-$text-light-60: rgba(245, 241, 233, 0.6);
-$input-bg: #f5f2ec;
-$text-dark: #333;
-$text-gray: #888;
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 
 .keep-in-touch {
-  background: $bg-dark;
+  background: #6C674D;
   padding: 0 48px;
   width: 100%;
 
   &__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 80px 0 114px;
     max-width: 1440px;
     margin: 0 auto;
   }
 
   &__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 50%;
-    color: $text-light;
+    color: #F5F1E9;
 
     & .keep-in-touch__title {
-      font-family: $font-main;
+      font-family: Roboto, sans-serif;
       font-weight: 700;
       font-size: 23px;
       line-height: 57.8px;
@@ -40,7 +48,7 @@ $text-gray: #888;
     }
 
     & .keep-in-touch__text {
-      font-family: $font-main;
+      font-family: Roboto, sans-serif;
       font-weight: 400;
       font-size: 14px;
       line-height: 24px;
@@ -56,24 +64,46 @@ $text-gray: #888;
     }
 
     .email-subscribe {
-      background-color: $input-bg;
+      background-color: #f5f2ec;
       padding: 15px 20px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       max-width: 440px;
       width: 100%;
-      font-family: $font-secondary;
+      font-family: sans-serif;
 
       &__input {
         border: none;
         background: transparent;
         font-size: 16px;
-        flex: 1;
-        color: $text-dark;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        color: #333;
         outline: none;
 
+        &::-webkit-input-placeholder {
+          color: #888;
+        }
+
+        &::-moz-placeholder {
+          color: #888;
+        }
+
+        &:-ms-input-placeholder {
+          color: #888;
+        }
+
+        &::-ms-input-placeholder {
+          color: #888;
+        }
+
         &::placeholder {
-          color: $text-gray;
+          color: #888;
         }
       }
 
@@ -82,7 +112,7 @@ $text-gray: #888;
         border: none;
         font-weight: bold;
         cursor: pointer;
-        color: $text-dark;
+        color: #333;
         font-size: 14px;
       }
     }
@@ -90,76 +120,102 @@ $text-gray: #888;
 
   &__right {
     width: 447px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 
     .keep-in-touch__nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: flex-end;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
       gap: 50px;
       max-width: 447px;
 
       .keep-in-touch__list {
         &-title {
-          font-family: $font-main;
+          font-family: Roboto, sans-serif;
           font-weight: 700;
           font-size: 12px;
           line-height: 20.4px;
           letter-spacing: 0.5px;
           text-transform: uppercase;
-          color: $text-light;
+          color: #F5F1E9;
           pointer-events: none;
         }
 
         li {
-          font-family: $font-main;
+          font-family: Roboto, sans-serif;
           font-weight: 400;
           font-size: 16px;
           line-height: 30.6px;
-          color: $text-light-60;
+          color: rgba(245, 241, 233, 0.6);
           margin-bottom: 13px;
           cursor: pointer;
           max-width: 98px;
+          -webkit-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
           transition: all 0.3s ease;
 
           &:hover,
           &:focus {
-            color: $text-light;
+            color: #F5F1E9;
           }
         }
       }
     }
 
     .keep-in-touch__logos {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       width: 100%;
       margin-top: 50px;
 
       &-title {
-        font-family: $font-main;
+        font-family: Roboto, sans-serif;
         font-weight: 700;
         font-size: 12px;
         line-height: 20.4px;
         letter-spacing: 0.5px;
         text-transform: uppercase;
-        color: $text-light;
+        color: #F5F1E9;
         pointer-events: none;
       }
 
       &-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         margin-top: 9px;
         gap: 24px;
 
         li {
+          -webkit-transition: -webkit-transform 0.3s ease;
+          transition: -webkit-transform 0.3s ease;
+          -o-transition: transform 0.3s ease;
           transition: transform 0.3s ease;
+          transition: transform 0.3s ease, -webkit-transform 0.3s ease;
           cursor: pointer;
 
           &:hover,
           &:focus {
-            transform: scale(1.05);
+            -webkit-transform: scale(1.05);
+                -ms-transform: scale(1.05);
+                    transform: scale(1.05);
           }
         }
       }
@@ -167,9 +223,9 @@ $text-gray: #888;
   }
 
   .email-subscribe__message {
-  margin-top: 6px;
-  font-size: 14px;
-}
+    margin-top: 6px;
+    font-size: 14px;
+  }
 
   // Адаптивність до 1000px
   @media (max-width: 1000px) {
@@ -195,32 +251,41 @@ $text-gray: #888;
     padding: 20px;
 
     &__container {
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       gap: 40px;
     }
 
     &__left,
     &__right,
     &__logos {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       width: 100%;
     }
 
     .keep-in-touch__text {
       width: 60%;
     }
-
   }
 
   // Адаптивність до 380px
   @media (max-width: 380px) {
     .keep-in-touch__nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: flex-end;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
       gap: 10px;
       max-width: 300px; 
     }
-
   }
 }
