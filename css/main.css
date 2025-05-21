@@ -326,17 +326,9 @@ h1, h2, h3, h4, h5, h6 {
 /* ------------HERO---------------------- */
 .hero {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: flex-start;
   padding-left: 48px;
   padding-right: 48px;
   width: 100%;
@@ -355,12 +347,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   margin-top: 20vh;
   margin-left: 30vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 .hero .hero__container p {
@@ -368,7 +355,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  letter-spacing: 0%;
   text-transform: uppercase;
 }
 .hero .hero__container h2 {
@@ -386,7 +372,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 50px;
   line-height: 72px;
   letter-spacing: 1px;
-  -webkit-text-decoration: underline solid 2px currentColor;
   text-decoration: underline solid 2px currentColor;
   margin-top: -25px;
   color: #35312E;
@@ -431,7 +416,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-size: 12px;
   line-height: 20.4px;
-  letter-spacing: 0%;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
@@ -439,28 +423,25 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #D37657;
   color: #FFFFFF;
   border: 2px solid transparent;
-  -webkit-transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
-  -o-transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
-  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 .hero .hero__container button:hover {
   color: #D37657;
   background-color: #fff;
   border-color: #D37657;
+  transform: translateY(-2px);
 }
 .hero .hero__container button:active {
   color: #fff;
   background-color: #a9523a;
   border-color: transparent;
+  transform: translateY(0);
 }
 @media (max-width: 720px) {
   .hero .hero__container {
     margin-left: 20px;
   }
-  .hero .hero__container h2 {
-    font-size: 40px;
-    line-height: 65px;
-  }
+  .hero .hero__container h2,
   .hero .hero__container h3 {
     font-size: 40px;
     line-height: 65px;
@@ -480,16 +461,13 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 14px;
     width: 100%;
   }
-  .hero .hero__container h2 {
-    font-size: 32px;
-    line-height: 65px;
-  }
+  .hero .hero__container h2,
   .hero .hero__container h3 {
     font-size: 32px;
     line-height: 65px;
   }
   .hero .hero__container button {
-    width: 174px; /* 30% менше */
+    width: 174px;
     height: 42px;
     font-size: 14px;
     margin-top: 40px;
@@ -501,13 +479,12 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     line-height: 40px;
   }
-  .hero .hero__container h2 {
+  .hero .hero__container h2,
+  .hero .hero__container h3 {
     font-size: 10vw;
     line-height: 40px;
   }
   .hero .hero__container h3 {
-    font-size: 10vw;
-    line-height: 40px;
     margin-top: 5px;
   }
   .hero .hero__container button {
@@ -586,44 +563,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 23px;
 }
 @media (max-width: 320px) {
-  .featured {
-    height: auto;
-    padding: 20px 0px;
+  .featured .featured__container {
+    padding: 10px 10px;
   }
-  .featured__container {
-    width: 100%;
-    padding: 0 5px;
-  }
-  .featured__container ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-  .featured__container li {
-    width: 8vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  .featured__container li:hover, .featured__container li:focus {
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-  }
-  .featured h2 {
-    font-size: 12px;
-    line-height: 20px;
+  .featured .featured__container h2 {
+    font-size: 8vw;
+    line-height: 32px;
     margin-bottom: 10px;
     width: 100%;
   }
@@ -631,10 +576,11 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
   .featured {
     height: auto;
-    padding: 20px 0px;
+    padding: 10px 0px;
+    width: 100%;
   }
   .featured__container {
-    padding: 0px 5px;
+    padding: 0px 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -644,7 +590,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     -ms-flex-line-pack: center;
     align-content: center;
-    width: 80%;
+    width: 100%;
   }
   .featured__container ul {
     display: -webkit-box;
@@ -685,7 +631,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 0px;
   }
   .featured__container {
-    padding: 0px 5px;
+    padding: 0px 20px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -699,7 +645,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 40px;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    padding: 0 60px;
+    padding: 20px 0px;
     width: 100%;
   }
   .featured__container li {

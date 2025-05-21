@@ -73,59 +73,29 @@
 
   /* Адаптивні стилі для 320px */
   @media (max-width: 320px) {
-    height: auto;
-    padding: 20px 0px;
 
-    &__container {
-      width: 100%;
-      padding: 0 5px;
+    .featured__container {
+      padding: 10px 10px;
 
-      ul {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-      }
-
-      li {
-        width: 8vw;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        margin-bottom: 20px;
-
-        &:hover,
-        &:focus {
-          -webkit-transform: none;
-              -ms-transform: none;
-                  transform: none;
-        }
-      }
-    }
-
-    h2 {
-      font-size: 12px;
-      line-height: 20px;
+      h2 {
+      font-size: 8vw;
+      line-height: 32px;
       margin-bottom: 10px;
       width: 100%;
     }
+    }
+
   }
 
   @media (max-width: 480px) {
+
     height: auto;
-    padding: 20px 0px;
+    padding: 10px 0px;
+    width: 100%;
+
 
     &__container {
-      padding: 0px 5px;
+      padding: 0px 10px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -135,7 +105,7 @@
               flex-direction: column;
       -ms-flex-line-pack: center;
           align-content: center;
-      width: 80%;
+      width: 100%;
 
 
       ul {
@@ -177,12 +147,14 @@
     }
   }
 
+  
+
   @media (max-width: 1100px) {
     height: auto;
     padding: 20px 0px;
 
     &__container {
-      padding: 0px 5px;
+      padding: 0px 20px;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
@@ -196,7 +168,7 @@
         gap: 40px;
         -ms-flex-pack: distribute;
             justify-content: space-around;
-        padding: 0 60px;
+        padding: 20px 0px;
 
         width: 100%;
       }
