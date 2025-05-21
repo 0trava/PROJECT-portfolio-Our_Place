@@ -280,7 +280,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 .mobile-menu ul li {
   position: relative;
@@ -288,7 +288,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 22.1px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -315,6 +315,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .mobile-menu.show {
   display: block;
+}
+@media (max-width: 480px) {
+  .mobile-menu {
+    top: 80px;
+  }
 }
 
 /*
