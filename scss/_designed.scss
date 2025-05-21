@@ -37,7 +37,7 @@
   
       h2 {
         font-family: Roboto;
-        font-weight: 400;
+        font-weight: 700;
         font-size: 35px;
         line-height: 48px;
         text-align: center;
@@ -197,6 +197,7 @@
     }
   
     @media (max-width: 650px) {
+      padding: 40px 10px;
 
       h2 {
         font-size: 24px;
@@ -219,9 +220,12 @@
     @media (max-width: 480px) {
 
       h2 {
-        font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 20px;
+      font-size: 24px;
+      line-height: 32px;
+      width: 100%;
+      font-weight: 700;
+      
+      margin-bottom: 20px;
       }
 
       .designed__discription {
@@ -229,11 +233,13 @@
       }
 
       ul{
-        gap: 10px;
+        gap: 5px;
+        padding: 10px 0;
+
   
         li {
-          width: 20px;
-          height: 20px;
+          width: 18px;
+          height: 18px;
           border-radius: 50%;
 
         }
