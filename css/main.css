@@ -1410,6 +1410,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   text-align: center;
+  cursor: pointer;
   -webkit-transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
   -o-transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
   transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
@@ -1459,41 +1460,22 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
 .keep-in-touch {
   background: #6C674D;
   padding: 0 48px;
   width: 100%;
 }
 .keep-in-touch__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 80px 0 114px;
   max-width: 1440px;
   margin: 0 auto;
 }
 .keep-in-touch__left {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
   width: 50%;
   color: #F5F1E9;
@@ -1521,11 +1503,7 @@ h1, h2, h3, h4, h5, h6 {
 .keep-in-touch__left .email-subscribe {
   background-color: #f5f2ec;
   padding: 15px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   max-width: 440px;
   width: 100%;
@@ -1535,23 +1513,9 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   background: transparent;
   font-size: 16px;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   color: #333;
   outline: none;
-}
-.keep-in-touch__left .email-subscribe__input::-webkit-input-placeholder {
-  color: #888;
-}
-.keep-in-touch__left .email-subscribe__input::-moz-placeholder {
-  color: #888;
-}
-.keep-in-touch__left .email-subscribe__input:-ms-input-placeholder {
-  color: #888;
-}
-.keep-in-touch__left .email-subscribe__input::-ms-input-placeholder {
-  color: #888;
 }
 .keep-in-touch__left .email-subscribe__input::placeholder {
   color: #888;
@@ -1566,23 +1530,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .keep-in-touch__right {
   width: 447px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
 }
 .keep-in-touch__right .keep-in-touch__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
   gap: 50px;
   max-width: 447px;
@@ -1606,20 +1559,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 13px;
   cursor: pointer;
   max-width: 98px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .keep-in-touch__right .keep-in-touch__nav .keep-in-touch__list li:hover, .keep-in-touch__right .keep-in-touch__nav .keep-in-touch__list li:focus {
   color: #F5F1E9;
 }
 .keep-in-touch__right .keep-in-touch__logos {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
   margin-top: 50px;
@@ -1635,23 +1581,15 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
 }
 .keep-in-touch__right .keep-in-touch__logos-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 9px;
   gap: 24px;
 }
 .keep-in-touch__right .keep-in-touch__logos-list li {
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   cursor: pointer;
 }
 .keep-in-touch__right .keep-in-touch__logos-list li:hover, .keep-in-touch__right .keep-in-touch__logos-list li:focus {
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 .keep-in-touch .email-subscribe__message {
@@ -1677,18 +1615,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;
   }
   .keep-in-touch__container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     gap: 40px;
   }
   .keep-in-touch__left, .keep-in-touch__right, .keep-in-touch__logos {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     width: 100%;
   }
@@ -1696,16 +1627,58 @@ h1, h2, h3, h4, h5, h6 {
     width: 60%;
   }
 }
-@media (max-width: 380px) {
-  .keep-in-touch .keep-in-touch__nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
+@media (max-width: 480px) {
+  .keep-in-touch {
+    padding: 0px 10px;
+  }
+  .keep-in-touch__text {
+    width: 80%;
+  }
+  .keep-in-touch__right {
+    width: 100%;
+  }
+  .keep-in-touch__nav {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+  .keep-in-touch__list {
     display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .keep-in-touch__list-title {
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    color: white !important;
+  }
+  .keep-in-touch__list li {
+    font-size: 18px !important;
+    max-width: 80% !important;
+  }
+  .keep-in-touch .email-subscribe {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 5px;
+    width: 90vw;
+  }
+  .keep-in-touch .email-subscribe__input {
+    width: 40vw;
+  }
+  .keep-in-touch .email-subscribe__submit {
+    margin: 0;
+  }
+}
+@media (max-width: 380px) {
+  .keep-in-touch__nav {
     gap: 10px;
     max-width: 300px;
+  }
+  .keep-in-touch__list li {
+    font-size: 14px !important;
+    max-width: 100% !important;
   }
 }
 

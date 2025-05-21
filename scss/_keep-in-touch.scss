@@ -1,41 +1,21 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 .keep-in-touch {
   background: #6C674D;
   padding: 0 48px;
   width: 100%;
 
   &__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    align-items: flex-start;
+    justify-content: space-between;
     padding: 80px 0 114px;
     max-width: 1440px;
     margin: 0 auto;
   }
 
   &__left {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
     width: 50%;
     color: #F5F1E9;
 
@@ -58,7 +38,7 @@
     .email-subscribe__input.invalid {
       color: #670A18;
     }
-    
+
     .email-subscribe__input.valid {
       color: #000000;
     }
@@ -66,12 +46,8 @@
     .email-subscribe {
       background-color: #f5f2ec;
       padding: 15px 20px;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+      align-items: center;
       max-width: 440px;
       width: 100%;
       font-family: sans-serif;
@@ -80,27 +56,9 @@
         border: none;
         background: transparent;
         font-size: 16px;
-        -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
+        flex: 1;
         color: #333;
         outline: none;
-
-        &::-webkit-input-placeholder {
-          color: #888;
-        }
-
-        &::-moz-placeholder {
-          color: #888;
-        }
-
-        &:-ms-input-placeholder {
-          color: #888;
-        }
-
-        &::-ms-input-placeholder {
-          color: #888;
-        }
 
         &::placeholder {
           color: #888;
@@ -120,24 +78,13 @@
 
   &__right {
     width: 447px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
 
     .keep-in-touch__nav {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end;
+      justify-content: flex-end;
       gap: 50px;
       max-width: 447px;
 
@@ -162,8 +109,6 @@
           margin-bottom: 13px;
           cursor: pointer;
           max-width: 98px;
-          -webkit-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease;
           transition: all 0.3s ease;
 
           &:hover,
@@ -175,13 +120,8 @@
     }
 
     .keep-in-touch__logos {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      flex-direction: column;
       width: 100%;
       margin-top: 50px;
 
@@ -197,25 +137,17 @@
       }
 
       &-list {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
         margin-top: 9px;
         gap: 24px;
 
         li {
-          -webkit-transition: -webkit-transform 0.3s ease;
-          transition: -webkit-transform 0.3s ease;
-          -o-transition: transform 0.3s ease;
           transition: transform 0.3s ease;
-          transition: transform 0.3s ease, -webkit-transform 0.3s ease;
           cursor: pointer;
 
           &:hover,
           &:focus {
-            -webkit-transform: scale(1.05);
-                -ms-transform: scale(1.05);
-                    transform: scale(1.05);
+            transform: scale(1.05);
           }
         }
       }
@@ -227,7 +159,6 @@
     font-size: 14px;
   }
 
-  // Адаптивність до 1000px
   @media (max-width: 1000px) {
     &__left {
       width: 40%;
@@ -246,27 +177,19 @@
     }
   }
 
-  // Адаптивність до 768px
   @media (max-width: 768px) {
     padding: 20px;
 
     &__container {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      flex-direction: column;
       gap: 40px;
     }
 
     &__left,
     &__right,
     &__logos {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+      align-items: center;
       width: 100%;
     }
 
@@ -275,17 +198,70 @@
     }
   }
 
-  // Адаптивність до 380px
-  @media (max-width: 380px) {
-    .keep-in-touch__nav {
-      display: -webkit-box;
-      display: -ms-flexbox;
+  @media (max-width: 480px) {
+    padding: 0px 10px;
+
+    &__text {
+      width: 80%;
+    }
+
+    &__right {
+      width: 100%;
+    }
+
+    &__nav {
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+    }
+
+    &__list {
       display: flex;
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__list-title {
+      font-weight: 700 !important;
+      font-size: 24px !important;
+      color: white !important;
+    }
+
+    &__list li {
+      font-size: 18px !important;
+      max-width: 80% !important;
+    }
+
+
+    .email-subscribe {
+      display: flex;
+      justify-content: space-around;
+
+      padding: 10px 5px;
+      width: 90vw;
+    }
+
+    .email-subscribe__input {
+      width: 40vw;
+    }
+
+    .email-subscribe__submit {
+      margin: 0;
+    }
+
+  }
+
+  @media (max-width: 380px) {
+    &__nav {
       gap: 10px;
-      max-width: 300px; 
+      max-width: 300px;
+    }
+
+        &__list li {
+      font-size: 14px !important;
+      max-width: 100% !important;
     }
   }
 }
