@@ -69,14 +69,13 @@
       pointer-events: none;
     }
 
-    .typing {
+.typing {
   font-family: Roboto;
   font-weight: 400;
   font-size: 50px;
   line-height: 72px;
   letter-spacing: 1px;
-  -webkit-text-decoration: underline solid 2px currentColor;
-          text-decoration: underline solid 2px currentColor;
+  text-decoration: underline solid 2px currentColor;
   margin-top: -25px;
   color: #35312E;
   pointer-events: none;
@@ -85,47 +84,28 @@
   white-space: nowrap;
   border-right: 2px solid #35312E;
   width: 0;
-  -webkit-animation: typing 4s steps(7, end) 2s infinite alternate,
-             blink 0.5s step-end infinite;
-          animation: typing 4s steps(7, end) 2s infinite alternate,
+  animation: typing 4s steps(7, end) 1s forwards alternate infinite,
              blink 0.5s step-end infinite;
 }
 
-/* Печатание и стирание */
-@-webkit-keyframes typing {
-  0% {
-    width: 0ch;
-  }
-  50% {
-    width: 7ch; /* "skillet" = 7 букв */
-  }
-  100% {
-    width: 0ch;
-  }
-}
 @keyframes typing {
   0% {
-    width: 0ch;
+    width: 0;
   }
   50% {
-    width: 7ch; /* "skillet" = 7 букв */
+    width: 7ch;
   }
   100% {
-    width: 0ch;
+    width: 0;
   }
 }
 
-/* Мигание курсора */
-@-webkit-keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
 @keyframes blink {
   50% {
     border-color: transparent;
   }
 }
+
 
 
     button {
